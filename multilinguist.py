@@ -78,3 +78,15 @@ class Multilinguist:
     json_response = json.loads(response.text)
     return json_response['translationText']
 
+
+abigail = Multilinguist()
+abigail.language_in('france')
+abigail.travel_to('france')
+print(abigail)
+msg = 'where I can find cheese' 
+abigail.say_in_local_language(msg)
+
+
+
+
+
