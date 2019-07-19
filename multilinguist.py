@@ -1,5 +1,6 @@
 import requests
 import json
+import random 
 
 class Multilinguist:
   """This class represents a world traveller who knows 
@@ -78,14 +79,43 @@ class Multilinguist:
     json_response = json.loads(response.text)
     return json_response['translationText']
 
+class MathGenius(Multilinguist): 
+    def __init__(self):
+      super().__init__()
 
-abigail = Multilinguist()
-abigail.language_in('france')
-abigail.travel_to('france')
-print(abigail)
-msg = 'where I can find cheese' 
-abigail.say_in_local_language(msg)
 
+    def report_total(self,list_of_numbers): 
+      total = 0
+      for number in list_of_numbers: 
+        total += number
+      return total 
+
+class QuoteCollector(Multilinguist): 
+    def __init__(self, collection): 
+      self().__init__()
+      self.collection = []
+
+    def add_quote(self):
+       
+
+
+
+
+
+
+# abigail = Multilinguist()
+# abigail.language_in('france')
+# abigail.travel_to('france')
+# print(abigail)
+# msg = 'where I can find cheese' 
+# abigail.say_in_local_language(msg)
+
+me = MathGenius()
+print(me.report_total([23,45,676,34,5778,4,23,5465])) # The total is 12048
+me.travel_to("India")
+print(me.report_total([6,3,6,68,455,4,467,57,4,534])) # है को कुल 1604
+me.travel_to("Italy")
+print(me.report_total([324,245,6,343647,686545])) # È Il totale 1030767
 
 
 
